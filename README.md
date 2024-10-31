@@ -1,8 +1,11 @@
 
-# Anovel Deep Learning Model for One-Class Anomaly Detection via Interpolated Gaussian Descriptor
+# Attention-Enhanced Interpolated Gaussian Descriptors for One-Class Anomaly Detection in Medical Imaging
 
 ## Project Overview
-This project implements a novel deep learning-based one-class anomaly detection model using an interpolated Gaussian descriptor. The model focuses on identifying anomalous data in image datasets, with a particular application in medical imaging for detecting malignant lesions.
+This repository contains the implementation of our novel One-Class Anomaly Detection (OCAD) framework, which leverages Attention-Enhanced Interpolated Gaussian Descriptors to address the challenges in medical image anomaly detection. Designed for applications where data labeling is limited or expensive, such as in dermatology for identifying malignant lesions, our framework is trained exclusively on benign samples to identify deviations indicative of malignancies.
+Attention-Based Autoencoder: Employs self-attention to capture critical regions within benign medical images, enhancing the model's sensitivity to subtle anomalies.
+Gaussian Anomaly Scoring: Integrates Gaussian scoring in the latent space to distinguish between benign and malignant representations, reducing false positives.
+Latent Space Interpolation: Interpolates latent vectors, allowing the model to generalize and capture nuanced deviations in complex, high-dimensional data.
 ![model strucure](https://github.com/user-attachments/assets/e658bdad-17bd-43e5-afbe-36d263e5002f)
 ## Repository Structure
 - **src/**: Contains all source code, including the model, data loader, and utility functions.
