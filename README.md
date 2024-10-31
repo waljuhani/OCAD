@@ -3,7 +3,7 @@
 
 ## Project Overview
 This project implements a novel deep learning-based one-class anomaly detection model using an interpolated Gaussian descriptor. The model focuses on identifying anomalous data in image datasets, with a particular application in medical imaging for detecting malignant lesions.
-
+![model strucure](https://github.com/user-attachments/assets/e658bdad-17bd-43e5-afbe-36d263e5002f)
 ## Repository Structure
 - **src/**: Contains all source code, including the model, data loader, and utility functions.
   - **data_loader.py**: Prepares the data generators for loading images.
@@ -12,6 +12,7 @@ This project implements a novel deep learning-based one-class anomaly detection 
   - **test.py**: Script to evaluate the model.
 - **requirements.txt**: Lists all dependencies for the project.
 - **README.md**: Project description and usage instructions.
+
 
 ## Getting Started
 
