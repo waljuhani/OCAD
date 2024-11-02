@@ -21,7 +21,11 @@ class AnomalyDetectionModel(Model):
         self.critic = critic
         self.mae = tf.keras.losses.MeanAbsoluteError()
         self.threshold = tf.Variable(0.5, trainable=False)  # Store threshold as a non-trainable variable
-
+    def add_gaussian_noise(self, image, mean=0.0, stddev=0.05):
+        """Adds Gaussian noise to an image and clips the output to prevent extreme values."""
+        noise = tf.random.normal(shape=tf.shape(image), mean=mean, stddev=stddev)
+        noisy_image = image + noise
+        return noisy_image
     def custom_reconstruction_loss(self, y_true, y_pred):
         """
         Computes reconstruction loss using MAE and SSIM for improved reconstruction quality.
@@ -76,7 +80,7 @@ class AnomalyDetectionModel(Model):
             - data: Input data tuple (x1).
         """
         x1 = data[0]
-        x2 = x1  # Duplicate x1 to use as second input
+        x2 = self.add_gaussian_noise(x1) # add noise to x1
 
         with tf.GradientTape() as tape:
             x1_hat, critic_pred, anomaly_score_z1, anomaly_score_z2 = self.autoencoder_model([x1, x2], training=True)
