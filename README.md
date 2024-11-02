@@ -7,6 +7,9 @@ Attention-Based Autoencoder: Employs self-attention to capture critical regions 
 Gaussian Anomaly Scoring: Integrates Gaussian scoring in the latent space to distinguish between benign and malignant representations, reducing false positives.
 Latent Space Interpolation: Interpolates latent vectors, allowing the model to generalize and capture nuanced deviations in complex, high-dimensional data.
 ![model strucure](https://github.com/user-attachments/assets/e658bdad-17bd-43e5-afbe-36d263e5002f)
+## Sample of Results
+![Uploading results.png…]()
+
 ## Repository Structure
 - **src/**: Contains all source code, including the model, data loader, and utility functions.
   - **data_loader.py**: Prepares the data generators for loading images.
