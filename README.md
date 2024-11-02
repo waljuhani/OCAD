@@ -8,7 +8,8 @@ Gaussian Anomaly Scoring: Integrates Gaussian scoring in the latent space to dis
 Latent Space Interpolation: Interpolates latent vectors, allowing the model to generalize and capture nuanced deviations in complex, high-dimensional data.
 ![model strucure](https://github.com/user-attachments/assets/e658bdad-17bd-43e5-afbe-36d263e5002f)
 ## Sample of Results
-![Uploading results.png…]()
+
+![results](https://github.com/user-attachments/assets/0a4a2eaa-9aee-4f77-b05f-cff400c88568)
 
 ## Repository Structure
 - **src/**: Contains all source code, including the model, data loader, and utility functions.
