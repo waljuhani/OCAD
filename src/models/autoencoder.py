@@ -93,7 +93,7 @@ class GaussianAnomalyClassifier(layers.Layer):
 
 def build_autoencoder():
     # Build encoder, decoder, anomaly classifier, and critic
-    encoder, shape_before_flatten = build_encoder(IMG_SHAPE)
+    encoder, shape_before_flatten = build_encoder_with_self_attention(IMG_SHAPE)
     decoder = build_decoder(shape_before_flatten)
     anomaly_classifier = GaussianAnomalyClassifier(LATENT_DIM)
     critic = build_critic(latent_dim=30976)  # Pass the latent_dim to ensure critic expects correct input size
